@@ -37,6 +37,8 @@ gulp.task('js', ['webpack'], function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('build', ['sass', 'js']);
+
 gulp.task('default', ['sass:watch', 'webpack']);
 
 gulp.task('prod', ['css', 'js']);
