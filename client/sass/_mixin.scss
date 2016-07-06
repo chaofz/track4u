@@ -1,0 +1,61 @@
+@mixin authForm {
+  form {
+    width: 100%;
+    position: relative;
+    // box-sizing: border-box;
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0.8em 1em;
+    font: inherit;
+    color: #4e5151;
+    font-size: 17px;
+    border: 1px solid #adbdc1;
+    transition: border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+      border: 1px solid #3b5998;
+    }
+    &.err {
+      border: 1px solid #d9534f;
+    }
+  }
+  p.signup-err {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    color: #d9534f;
+    text-align: center;
+  }
+  p.signin-err {
+    @extend p.signup-err;
+    top: 195px;
+  }
+  button#signin {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 200px;
+    font: inherit;
+    line-height: 3;
+    background: #fff;
+    border: 1px solid #adbdc1;
+    outline: none;
+    &:hover {
+      border: 1px solid #3b5998;
+    }
+    &:focus {
+      color: #fff;
+      background: #5185b5;
+      border-color: #5185b5;
+    }
+  }
+}
+
+@mixin head {
+  color: #353535;
+}

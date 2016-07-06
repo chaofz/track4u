@@ -1,0 +1,59 @@
+@import "navbar";
+@import "content";
+body {
+  z-index: -1;
+  font-weight: 300;
+  margin: 0;
+  height: 100%;
+  font-family: Open Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  #app {
+    position: relative;
+    margin: 35px auto;
+    width: 90%;
+    height: 100%;
+    min-width: 400px;
+    max-width: 1000px;
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      font-size: 15px;
+      text-align: center;
+      opacity: 0.5;
+    }
+  }
+  a {
+    color: #3b5998;
+    text-decoration: none;
+    margin: 0 3px;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: #3b5998;
+    }
+  }
+  i {
+    cursor: default;
+  }
+}
+
+.pull-right {
+  position: absolute;
+  right: 0;
+}
+
+.pull-right-down {
+  @extend .pull-right;
+  bottom: 0;
+  * {
+    padding: 0 15px;
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   width: 1000px;
+// }

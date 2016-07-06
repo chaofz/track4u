@@ -1,0 +1,19 @@
+.content {
+  position: relative;
+  padding-top: 5px;
+  @import "welcome";
+  @import "settings";
+  @import "dashboard";
+  @import "auth";
+  @import "mixin";
+  .not-found,
+  .logout {
+    p.title {
+      @include head;
+      font-size: 2.5em;
+      padding-left: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+}

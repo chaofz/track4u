@@ -1,0 +1,152 @@
+@import "mixin";
+
+.dashboard {
+  text-align: center;
+  position: relative;
+  p.title {
+    @include head;
+    font-size: 2.8em;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  form#query-form {
+    box-sizing: border-box;
+    input {
+      padding: 0.8em;
+      width: 100px;
+      height: 50px;
+      vertical-align: top;
+      font: inherit;
+      color: #4e5151;
+      font-size: 17px;
+      border-top: 1px solid #5185b5;
+      border-bottom: 1px solid #5185b5;
+      transition: border-color 0.2s ease-in-out;
+      box-sizing: border-box;
+      outline: none;
+      &:nth-child(1) {
+        border-left: 1px solid #5185b5;
+        border-right: 0;
+      }
+      &:nth-child(2) {
+        border-left: 1px solid #ddd;
+        border-right: 0;
+      }
+      &:nth-child(3) {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #5185b5;
+      }
+      &[type="number"]::-webkit-outer-spin-button,
+      &[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      vertical-align: top;
+      font: inherit;
+      line-height: 3;
+      background: #fff;
+      border: 1px solid #5185b5;
+      outline: none;
+      background: #5185b5;
+      color: #fff;
+      &:active {
+        color: #fff;
+        background: #3b5998;
+        border-color: #3b5998;
+      }
+    }
+  }
+  p.err {
+    margin-top: 17px;
+    color: #d9534f;
+    font-size: 14px;
+  }
+  span.input {
+    position: relative;
+    display: inline-block;
+  }
+  ul.sugg {
+    position: absolute;
+    list-style: none;
+    overflow: auto;
+    top: 55px;
+    width: 98px;
+    max-height: 120px;
+    padding: 7px 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    &.subj {
+      // left: 0;
+    }
+    span {
+      font-size: 14px;
+      color: #d9534f;
+    }
+    li {
+      text-align: left;
+      padding: 7px;
+      padding-left: 13px;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background: #5185b5;
+      }
+    }
+  }
+  ul.queries {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    width: 370px;
+    margin: 0 auto;
+    z-index: -1;
+    list-style: none;
+    li {
+      text-align: initial;
+      margin: 15px 0;
+      // font-size: 20px;
+      div.course-info {
+        display: inline-block;
+        text-align: center;
+        width: 298px;
+        height: 48px;
+        line-height: 50px;
+        font-size: 18px;
+        border: 1px solid #ddd;
+        border-right: 1px solid #fff;
+        span {
+          padding: 0 5px;
+        }
+      }
+      button {
+        padding: 0;
+        width: 70px;
+        height: 50px;
+        vertical-align: top;
+        font: inherit;
+        font-size: 24px;
+        background: #fff;
+        border: 1px solid #d9534f;
+        outline: none;
+        background: #d9534f;
+        color: #fff;
+        &:active {
+          color: #fff;
+          background: #c34a47;
+          border-color: #c34a47;
+        }
+      }
+    }
+  }
+}

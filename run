@@ -1,0 +1,12 @@
+#!/bin/bash
+# cd crawler
+# nohup python querySeats.py
+# bg
+
+cd ..
+mongod
+bg
+
+cd server
+node server.js
+

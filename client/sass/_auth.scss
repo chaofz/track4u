@@ -1,0 +1,46 @@
+@import "mixin";
+
+.auth {
+  width: 470px;
+  margin: 20px auto;
+  p.title {
+    @include head;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 30px;
+  }
+  @include authForm;
+  p#acnt-hint {
+    text-align: center;
+    color: #8b979a;
+    margin-top: 35px;
+    font-size: 15px;
+    a {
+      text-decoration: underline;
+    }
+  }
+  p#oauth {
+    width: 370px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 0.5px solid #ccc;
+    i {
+      font-size: 30px;
+      color: #8b979a;
+      margin: 0 8px;
+      vertical-align: -5px;
+      &:hover {
+        color: #3b5998;
+      }
+      &.fa-google-plus-square:hover {
+        color: #d34836;
+      }
+    }
+  }
+}
+
+
+
