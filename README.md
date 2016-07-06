@@ -1,5 +1,5 @@
 # Track4U
-Track4U is a Single Page Application built with React, React-router, Node.js and MongoDB. This project is to provide auto-checking service for students who want to enroll a full-seated class.
+Track4U is a Single Page Application built with [React](https://facebook.github.io/react/), [React-router](https://github.com/reactjs/react-router), [Node.js](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/). This project is to provide auto-checking service for students who want to enroll a full-seated class.
 
 ### Getting Started
 
@@ -29,9 +29,9 @@ Change to the `client` directory and run
 $ npm install
 ```
 
-#### 4. Build client
+#### 4. Build the client
 
-Under 'client'
+Under `client`
 
 ```sh
 $ gulp build
@@ -39,7 +39,7 @@ $ gulp build
 
 #### 5. Run the server
 
-Go to 'server'
+Change to `server`
 
 ```sh
 $ node server.js
