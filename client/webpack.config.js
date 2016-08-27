@@ -4,9 +4,10 @@ var webpack = require("webpack");
 module.exports = {
   entry: './src/entry.jsx',
   output: {
-    path: path.join(__dirname, '/dist/js'),
+    path: path.join(__dirname, '/public/js'),
     filename: 'bundle.js'
   },
+  watch: true,
   module: {
     loaders: [{
       test: /\.jsx?$/,

@@ -1,5 +1,3 @@
-import auth from './auth';
-
 var http = {
   _get(route, callback) {
     var xhr = xhrSetup('GET', route);
@@ -38,7 +36,8 @@ var http = {
 
 function xhrSetup(method, route) {
   var xhr = new XMLHttpRequest();
-  xhr.open(method, route, true);
+  var host = location.host === 'localhost:3010' ? 'http://localhost:3000' : 'http://chaofz.me:3000';
+  xhr.open(method, host + route, true);
   xhr.setRequestHeader('x-access-token', localStorage['token'] || '');
   return xhr;
 }

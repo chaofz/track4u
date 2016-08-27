@@ -16,20 +16,11 @@ app.use(bodyParser.json());
 mongoose.connect(config.database);
 require('./config/passport.config').setup(); // setup passport strategies
 
-var clientPath = path.join(__dirname, '../client');
-if (app.get('env') === 'production') {
-  clientPath = path.join(__dirname, '../client/dist');
-}
+var clientPath = path.join(__dirname, app.get('env') === 'production' ? '../client/public' : '../client');
 
 app.use(express.static(clientPath));
 
-// setup routers
-require('./routes')(app, clientPath);
-
-// app.use('/auth', require('./routes/auth.route'));
-// app.use('/api/users', require('./routes/users.route'));
-// app.use('/api/queries', require('./routes/queries.route'));
-// app.get('*', function(req, res) { res.sendFile(clientPath + '/index.html'); });
+require('./routes')(app, clientPath); // setup routers
 
 var server = http.createServer(app).listen(config.port, function() {
   console.log('Server is listening on ' + config.port);
