@@ -36,8 +36,8 @@ var http = {
 
 function xhrSetup(method, route) {
   var xhr = new XMLHttpRequest();
-  var host = location.host === 'localhost:3010' ? 'http://localhost:3000' : 'http://chaofz.me:3000';
-  xhr.open(method, host + route, true);
+  // var host = location.host === 'localhost:3010' ? 'http://localhost:3000' : 'http://chaofz.me:3000';
+  xhr.open(method, route, true);
   xhr.setRequestHeader('x-access-token', localStorage['token'] || '');
   return xhr;
 }
